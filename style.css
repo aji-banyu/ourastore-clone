@@ -215,7 +215,7 @@ nav .navbar {
 .carousel .slide-container {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 485px;
     border-radius: 22px;
     overflow: hidden;
     box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
@@ -255,6 +255,7 @@ span.prev, span.next {
     padding: 14px;
     background-color: rgba(0, 0, 0, 0.2);
     transition: .3s all ease;
+    cursor: pointer;
 }
 
 span.prev {
@@ -265,7 +266,74 @@ span.next {
 }
 
 span.prev:hover, span.next:hover {
-    background-color: rgba(36, 36, 36, .2);
+    background-color: rgba(98, 98, 98, 0.2);
 }
 
+.populer {
+    width: 100%;
+    height: 100%;
+    background-color: #262727;
+    padding: 30px 10rem 0;
+}
 
+.populer .pupuler-heading h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.populer .pupuler-heading p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    margin-left: 30px;
+}
+
+.populer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+    padding: 28px 0;
+}
+
+.populer-content .populer-item {
+    flex-grow: 1;
+    flex-basis: 32%;
+    /* max-width: 400px; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 16px;
+    background-image: url(populer/bg/5584860.jpg);
+    background-size: cover  ;
+}
+
+.populer-content .populer-item .populer-img {
+    border-radius: 12px;
+    width: 80px;
+    overflow: hidden;
+}
+
+.populer-content .populer-item .populer-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.populer-content .populer-item .populer-desc {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.populer-content .populer-item .populer-desc h4 {
+    color: #fff;
+    font-size: 16px;
+}
+
+.populer-content .populer-item .populer-desc p {
+    color: #fff;
+    font-size: 14px;
+}
