@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --main-padding: 0 10rem;
+    --main-padding: 0 9rem;
     --main-color: #b09772;
     --main-background: #262727;
 }
@@ -29,7 +29,7 @@ header {
 }
 
 .top {
-    padding: 8px 10rem;
+    padding: 8px 9rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -149,7 +149,7 @@ header {
 
 nav {
     width: 100%;
-    padding: 12px 10rem;
+    padding: 12px 9rem;
     border-bottom: 0.2px solid #555;
 }
 
@@ -209,7 +209,7 @@ nav .navbar {
     justify-content: center;
     align-items: center;
     background-color: #242424;
-    padding: 140px 10rem 25px;
+    padding: 140px 9rem 25px;
 }
 
 .carousel .slide-container {
@@ -273,7 +273,7 @@ span.prev:hover, span.next:hover {
     width: 100%;
     height: 100%;
     background-color: #262727;
-    padding: 30px 10rem 0;
+    padding: 30px 9rem 0;
 }
 
 .populer .pupuler-heading h2 {
@@ -293,28 +293,43 @@ span.prev:hover, span.next:hover {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 22px;
+    gap: 18px;
     padding: 28px 0;
 }
 
 .populer-content .populer-item {
     flex-grow: 1;
-    flex-basis: 32%;
-    /* max-width: 400px; */
+    flex-basis: 30%;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
-    padding: 10px;
+    gap: 8px;
+    padding: 6px;
+    outline: 3px solid transparent;
+    outline-offset: 2px;
     border-radius: 16px;
     background-image: url(populer/bg/5584860.jpg);
+    background-repeat: no-repeat;
     background-size: cover  ;
+    background-position: center;
+    transition: .3s;
+}
+
+.populer-content .populer-item:hover {
+    outline-color: var(--main-color);
 }
 
 .populer-content .populer-item .populer-img {
     border-radius: 12px;
     width: 80px;
+    height: 80px;
     overflow: hidden;
+    transition: .3s all ease;
+}
+
+.populer-content .populer-item:hover .populer-img {
+    transform: scale(1.08);
 }
 
 .populer-content .populer-item .populer-img img {
@@ -336,4 +351,116 @@ span.prev:hover, span.next:hover {
 .populer-content .populer-item .populer-desc p {
     color: #fff;
     font-size: 14px;
+}
+
+main{
+    padding: 10px 9rem;
+    background-color: #262727;
+}
+
+main .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main .main-nav li {
+    list-style: none;
+    padding: 10px 12px;
+    background-color: #373b3f;
+    width: max-content;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+main .main-nav li.active {
+    background-color: var(--main-color);
+}
+
+main .card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 23px;
+    padding-top: 26px;
+}
+
+main .card .card-item {
+    position: relative;
+    width: 186px;
+    height: 288px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    outline: 3px solid transparent;
+    outline-offset: 3px;
+    transform: scale(1);
+    transition: .3s ease;
+}
+
+main .card .card-item:hover {
+    outline-color: var(--main-color);
+    transform: scale(1.05);
+}
+
+main .card .card-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .card .card-item .card-banner {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    background: #ffffff;
+background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.87) 100%);
+    transition: .2s all ease;
+}
+
+main .card .card-item .card-banner h4 {
+    color: #fff;
+    font-size: 16px;
+}
+
+main .card .card-item .card-banner p {
+    color: #fff;
+    font-size: 12px;
+}
+
+main .card .card-item:hover .card-banner {
+    top: 0;
+}
+
+main .tampilkan-lainnya {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px;
+}
+
+main .tampilkan-lainnya button {
+    width: max-content;
+    padding: 10px;
+    background: transparent;
+    outline: none;
+    border: .5px solid #555;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #fff;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+main .tampilkan-lainnya button:hover {
+    background-color: #555;
 }
